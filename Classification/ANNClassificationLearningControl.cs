@@ -3,7 +3,6 @@ using Accord.Math;
 using Accord.Math.Random;
 using Accord.Neuro;
 using Accord.Neuro.Learning;
-using Accord.Statistics.Kernels;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -200,92 +199,100 @@ namespace DNMachineLearning.Classification
         {
             int numberOfEntries = inputColumns.Length;
 
-            //Create learner
-            object annLearning = null;
-            switch (learningMethod)
+            try
             {
-                case LearningMethod.LevenbergMarquardt:
-                    annLearning = new LevenbergMarquardtLearning(ann, useRegularization)
-                    {
-                        LearningRate = learningRate
-                    };
-                    break;
-                case LearningMethod.Backpropagation:
-                    annLearning = new BackPropagationLearning(ann)
-                    {
-                        LearningRate = learningRate
-                    };
-                    break;
-                case LearningMethod.ResilientBackpropagation:
-                    annLearning = new ResilientBackpropagationLearning(ann)
-                    {
-                        LearningRate = learningRate
-                    };
-                    break;
-                case LearningMethod.ParallelResilientBackpropagation:
-                    annLearning = new ParallelResilientBackpropagationLearning(ann);
-                    break;
-                case LearningMethod.Perceptron:
-                    annLearning = new PerceptronLearning(ann)
-                    {
-                        LearningRate = learningRate
-                    };
-                    break;
-                case LearningMethod.DeltaRule:
-                    annLearning = new DeltaRuleLearning(ann)
-                    {
-                        LearningRate = learningRate
-                    };
-                    break;
-            }
-
-            //Iterations
-            iteration = 1;
-            Stopwatch stopwatch = Stopwatch.StartNew();
-
-            //Loop
-            while (!needToStop)
-            {
-                //Run epoch of learning procedure
+                //Create learner
+                object annLearning = null;
                 switch (learningMethod)
                 {
                     case LearningMethod.LevenbergMarquardt:
-                        error = ((LevenbergMarquardtLearning)annLearning).RunEpoch(inputColumns, outputIntegerColumns.ToDouble()) / numberOfEntries;
+                        annLearning = new LevenbergMarquardtLearning(ann, useRegularization)
+                        {
+                            LearningRate = learningRate
+                        };
                         break;
                     case LearningMethod.Backpropagation:
-                        error = ((BackPropagationLearning)annLearning).RunEpoch(inputColumns, outputIntegerColumns.ToDouble()) / numberOfEntries;
+                        annLearning = new BackPropagationLearning(ann)
+                        {
+                            LearningRate = learningRate
+                        };
                         break;
                     case LearningMethod.ResilientBackpropagation:
-                        error = ((ResilientBackpropagationLearning)annLearning).RunEpoch(inputColumns, outputIntegerColumns.ToDouble()) / numberOfEntries;
+                        annLearning = new ResilientBackpropagationLearning(ann)
+                        {
+                            LearningRate = learningRate
+                        };
                         break;
                     case LearningMethod.ParallelResilientBackpropagation:
-                        error = ((ParallelResilientBackpropagationLearning)annLearning).RunEpoch(inputColumns, outputIntegerColumns.ToDouble()) / numberOfEntries;
+                        annLearning = new ParallelResilientBackpropagationLearning(ann);
                         break;
                     case LearningMethod.Perceptron:
-                        error = ((PerceptronLearning)annLearning).RunEpoch(inputColumns, outputIntegerColumns.ToDouble()) / numberOfEntries;
+                        annLearning = new PerceptronLearning(ann)
+                        {
+                            LearningRate = learningRate
+                        };
                         break;
                     case LearningMethod.DeltaRule:
-                        error = ((DeltaRuleLearning)annLearning).RunEpoch(inputColumns, outputIntegerColumns.ToDouble()) / numberOfEntries;
+                        annLearning = new DeltaRuleLearning(ann)
+                        {
+                            LearningRate = learningRate
+                        };
                         break;
                 }
 
-                //Increase current iteration
-                iteration++;
-                elapsed = stopwatch.Elapsed;
-                UpdateStatus();
+                //Iterations
+                iteration = 1;
+                Stopwatch stopwatch = Stopwatch.StartNew();
 
-                //Check if we need to stop
-                if (iteration > maxIteration)
+                //Loop
+                while (!needToStop)
                 {
-                    if (error <= tolerance)
-                        isConverged = true;
+                    //Run epoch of learning procedure
+                    switch (learningMethod)
+                    {
+                        case LearningMethod.LevenbergMarquardt:
+                            error = ((LevenbergMarquardtLearning)annLearning).RunEpoch(inputColumns, outputIntegerColumns.ToDouble()) / numberOfEntries;
+                            break;
+                        case LearningMethod.Backpropagation:
+                            error = ((BackPropagationLearning)annLearning).RunEpoch(inputColumns, outputIntegerColumns.ToDouble()) / numberOfEntries;
+                            break;
+                        case LearningMethod.ResilientBackpropagation:
+                            error = ((ResilientBackpropagationLearning)annLearning).RunEpoch(inputColumns, outputIntegerColumns.ToDouble()) / numberOfEntries;
+                            break;
+                        case LearningMethod.ParallelResilientBackpropagation:
+                            error = ((ParallelResilientBackpropagationLearning)annLearning).RunEpoch(inputColumns, outputIntegerColumns.ToDouble()) / numberOfEntries;
+                            break;
+                        case LearningMethod.Perceptron:
+                            error = ((PerceptronLearning)annLearning).RunEpoch(inputColumns, outputIntegerColumns.ToDouble()) / numberOfEntries;
+                            break;
+                        case LearningMethod.DeltaRule:
+                            error = ((DeltaRuleLearning)annLearning).RunEpoch(inputColumns, outputIntegerColumns.ToDouble()) / numberOfEntries;
+                            break;
+                    }
 
-                    break;
+                    //Increase current iteration
+                    iteration++;
+                    elapsed = stopwatch.Elapsed;
+                    UpdateStatus();
+
+                    //Check if model converged
+                    if (iteration > maxIteration)
+                    {
+                        if (error <= tolerance)
+                            isConverged = true;
+
+                        break;
+                    }
                 }
-            }
 
-            stopwatch.Stop();
-            EnableControls(true);
+                stopwatch.Stop();
+                EnableControls(true);
+            }
+            catch
+            {
+                isConverged = false;
+                EnableControls(true);
+            }
         }
 
         private IActivationFunction CreateActivationFunction()
