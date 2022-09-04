@@ -61,8 +61,8 @@
             this.helpToolStripMenuItem});
             this.mainMenuStrip.Location = new System.Drawing.Point(0, 0);
             this.mainMenuStrip.Name = "mainMenuStrip";
-            this.mainMenuStrip.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.mainMenuStrip.Size = new System.Drawing.Size(1312, 28);
+            this.mainMenuStrip.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.mainMenuStrip.Size = new System.Drawing.Size(984, 24);
             this.mainMenuStrip.TabIndex = 1;
             this.mainMenuStrip.Text = "menuStrip1";
             // 
@@ -76,7 +76,7 @@
             this.toolStripMenuItem1,
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(50, 24);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
             this.fileToolStripMenuItem.Text = "&Task";
             // 
             // newTaskTrainingToolStripMenuItem
@@ -92,14 +92,14 @@
             this.principalComponentAnalysisToolStripMenuItem,
             this.discriminantAnalysisToolStripMenuItem});
             this.newTaskTrainingToolStripMenuItem.Name = "newTaskTrainingToolStripMenuItem";
-            this.newTaskTrainingToolStripMenuItem.Size = new System.Drawing.Size(285, 26);
+            this.newTaskTrainingToolStripMenuItem.Size = new System.Drawing.Size(229, 22);
             this.newTaskTrainingToolStripMenuItem.Text = "&New task";
             // 
             // binaryClassificationToolStripMenuItem
             // 
             this.binaryClassificationToolStripMenuItem.Name = "binaryClassificationToolStripMenuItem";
             this.binaryClassificationToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.B)));
-            this.binaryClassificationToolStripMenuItem.Size = new System.Drawing.Size(338, 26);
+            this.binaryClassificationToolStripMenuItem.Size = new System.Drawing.Size(274, 22);
             this.binaryClassificationToolStripMenuItem.Text = "&Binary Classification";
             this.binaryClassificationToolStripMenuItem.Click += new System.EventHandler(this.binaryClassificationToolStripMenuItem_Click);
             // 
@@ -107,46 +107,46 @@
             // 
             this.multiclassClassificationToolStripMenuItem.Name = "multiclassClassificationToolStripMenuItem";
             this.multiclassClassificationToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.M)));
-            this.multiclassClassificationToolStripMenuItem.Size = new System.Drawing.Size(338, 26);
+            this.multiclassClassificationToolStripMenuItem.Size = new System.Drawing.Size(274, 22);
             this.multiclassClassificationToolStripMenuItem.Text = "&Multiclass Classification";
             this.multiclassClassificationToolStripMenuItem.Click += new System.EventHandler(this.multiclassClassificationToolStripMenuItem_Click);
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(335, 6);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(271, 6);
             // 
             // regressionToolStripMenuItem
             // 
             this.regressionToolStripMenuItem.Name = "regressionToolStripMenuItem";
             this.regressionToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.R)));
-            this.regressionToolStripMenuItem.Size = new System.Drawing.Size(338, 26);
+            this.regressionToolStripMenuItem.Size = new System.Drawing.Size(274, 22);
             this.regressionToolStripMenuItem.Text = "&Regression";
             this.regressionToolStripMenuItem.Click += new System.EventHandler(this.regressionToolStripMenuItem_Click);
             // 
             // toolStripMenuItem4
             // 
             this.toolStripMenuItem4.Name = "toolStripMenuItem4";
-            this.toolStripMenuItem4.Size = new System.Drawing.Size(335, 6);
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(271, 6);
             // 
             // clusteringToolStripMenuItem
             // 
             this.clusteringToolStripMenuItem.Name = "clusteringToolStripMenuItem";
             this.clusteringToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.U)));
-            this.clusteringToolStripMenuItem.Size = new System.Drawing.Size(338, 26);
+            this.clusteringToolStripMenuItem.Size = new System.Drawing.Size(274, 22);
             this.clusteringToolStripMenuItem.Text = "Cl&ustering";
             this.clusteringToolStripMenuItem.Click += new System.EventHandler(this.clusteringToolStripMenuItem_Click);
             // 
             // toolStripMenuItem5
             // 
             this.toolStripMenuItem5.Name = "toolStripMenuItem5";
-            this.toolStripMenuItem5.Size = new System.Drawing.Size(335, 6);
+            this.toolStripMenuItem5.Size = new System.Drawing.Size(271, 6);
             // 
             // principalComponentAnalysisToolStripMenuItem
             // 
             this.principalComponentAnalysisToolStripMenuItem.Name = "principalComponentAnalysisToolStripMenuItem";
             this.principalComponentAnalysisToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
-            this.principalComponentAnalysisToolStripMenuItem.Size = new System.Drawing.Size(338, 26);
+            this.principalComponentAnalysisToolStripMenuItem.Size = new System.Drawing.Size(274, 22);
             this.principalComponentAnalysisToolStripMenuItem.Text = "&Principal Component Analysis";
             this.principalComponentAnalysisToolStripMenuItem.Click += new System.EventHandler(this.principalComponentAnalysisToolStripMenuItem_Click);
             // 
@@ -154,7 +154,7 @@
             // 
             this.discriminantAnalysisToolStripMenuItem.Name = "discriminantAnalysisToolStripMenuItem";
             this.discriminantAnalysisToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.D)));
-            this.discriminantAnalysisToolStripMenuItem.Size = new System.Drawing.Size(338, 26);
+            this.discriminantAnalysisToolStripMenuItem.Size = new System.Drawing.Size(274, 22);
             this.discriminantAnalysisToolStripMenuItem.Text = "&Discriminant Analysis";
             this.discriminantAnalysisToolStripMenuItem.Click += new System.EventHandler(this.discriminantAnalysisToolStripMenuItem_Click);
             // 
@@ -162,7 +162,7 @@
             // 
             this.loadToolStripMenuItem.Name = "loadToolStripMenuItem";
             this.loadToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.loadToolStripMenuItem.Size = new System.Drawing.Size(285, 26);
+            this.loadToolStripMenuItem.Size = new System.Drawing.Size(229, 22);
             this.loadToolStripMenuItem.Text = "&Load trained model...";
             this.loadToolStripMenuItem.Click += new System.EventHandler(this.loadToolStripMenuItem_Click);
             // 
@@ -171,7 +171,7 @@
             this.saveToolStripMenuItem.Enabled = false;
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
             this.saveToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(285, 26);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(229, 22);
             this.saveToolStripMenuItem.Text = "&Save trained model...";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
@@ -180,20 +180,20 @@
             this.closeToolStripMenuItem.Enabled = false;
             this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
             this.closeToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.W)));
-            this.closeToolStripMenuItem.Size = new System.Drawing.Size(285, 26);
+            this.closeToolStripMenuItem.Size = new System.Drawing.Size(229, 22);
             this.closeToolStripMenuItem.Text = "&Close";
             this.closeToolStripMenuItem.Click += new System.EventHandler(this.closeToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(282, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(226, 6);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(285, 26);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(229, 22);
             this.exitToolStripMenuItem.Text = "E&xit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -202,15 +202,15 @@
             this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.aboutToolStripMenuItem});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(55, 24);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.helpToolStripMenuItem.Text = "&Help";
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             this.aboutToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F1;
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(157, 26);
-            this.aboutToolStripMenuItem.Text = "&About";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.aboutToolStripMenuItem.Text = "&About...";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // saveFileDialog
@@ -227,15 +227,14 @@
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1312, 713);
+            this.ClientSize = new System.Drawing.Size(984, 579);
             this.Controls.Add(this.mainMenuStrip);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.KeyPreview = true;
             this.MainMenuStrip = this.mainMenuStrip;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MainForm";
             this.Text = "Machine Learning";
             this.mainMenuStrip.ResumeLayout(false);

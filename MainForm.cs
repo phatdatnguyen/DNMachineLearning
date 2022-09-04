@@ -470,7 +470,7 @@ namespace DNMachineLearning
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AboutBox aboutBox = new AboutBox();
-            aboutBox.Show(this);
+            aboutBox.ShowDialog(this);
         }
 
         private void MdiChildClosed(object sender, FormClosedEventArgs e)
